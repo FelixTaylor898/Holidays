@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Felix Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Holiday Calendars - Delete</title>
+  </head>
+  
+  <body>
+
+    <!-- Navigating to other pages -->
+    <nav class="navbar navbar-expand-sm default-nav">
+      <a href="index.html" class="navbar-brand nav-link active">Holiday Calendars</a>
+      <div class="collapse navbar-collapse">
+        <div class="btn-group">
+          <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Months
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="January.html">January</a>
+            <a class="dropdown-item" href="February.html">February</a>
+            <a class="dropdown-item" href="March.html">March</a>
+            <a class="dropdown-item" href="April.html">April</a>
+            <a class="dropdown-item" href="May.html">May</a>
+            <a class="dropdown-item" href="June.html">June</a>
+            <a class="dropdown-item" href="July.html">July</a>
+            <a class="dropdown-item" href="August.html">August</a>
+            <a class="dropdown-item" href="September.html">September</a>
+            <a class="dropdown-item" href="October.html">October</a>
+            <a class="dropdown-item" href="November.html">November</a>
+            <a class="dropdown-item" href="December.html">December</a>
+          </div>
+        </div>
+
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="lists.html" class="nav-link nav-item">Lists</a></li>
+          <li class="nav-item"><a href="create.html" class="nav-link nav-item">Create</a> </li>
+          <li class="nav-item"><a href="delete.html" class="nav-link nav-item">Delete</a> </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Selecting a month to delete data -->
+    <div class="container mt-4"><h1 class="h3">Choose a month to delete its data</h1></div>
+    <div class="container nmContainer mt-4">
+      <div class="row d-flex justify-content-around pt-3 pb-3" id="deleteDays">
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="january01">January</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="february02">February</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="march03">March</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="april04">April</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="may05">May</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="june06">June</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="july07">July</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="august08">August</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="september09">September</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="october10">October</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="november11">November</div>
+        <div class="btn btn-outline-secondary col-3 col-md-3 m-1 delMonth" id="december12">December</div>
+        <div class="btn btn-danger col-3 col-md-3 m-1" id="deleteAllD">Delete all holidays</div>
+        <div class="btn btn-danger col-3 col-md-3 m-1" id="deleteAllM">Delete all holimonths</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+      <div class="mt-4 row d-flex justify-content-around">
+        <button id="clear" class="btn btn-danger col-10">Clear all saved data (holidays, holimonths, lists)</button>
+      </div>
+    </div>
+
+    <!-- Modal to show data to delete based on the selected month -->
+    <div class="modal fade" id="deletion" aria-modal="true" tabindex="0" aria-label="Click holidays or holimonths to delete them" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="titleDays">Default</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body row d-flex justify-content-around" id="delHolidays" ></div>
+          <div class="modal-header">
+            <h2 class="modal-title" id="titleMonths">Default</h2>
+          </div>
+          <div class="modal-body row d-flex justify-content-around" id="delHolimonths"> </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 pt-3 nmContainer col-6">
+      <h2 class="h6">Instructions</h2>
+      <ul style="list-style-type:none;">
+        <li>Click a month to display its holidays/holimonths.</li>
+        <li>Click a holiday/holimonth to remove it from the calendar.</li>
+        <li>Remove all holidays/holimonths with the "Delete all" buttons.</li>
+        <li>"Clear all saved data" will reset the site.</li>
+        <li>CS280 Project - Felix Taylor</li>
+      </ul>
+    </div>
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="holidays.js"></script>
+
+  </body>
+</html>

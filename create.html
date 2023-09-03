@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Felix Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Holiday Calendars - Create</title>
+  </head>
+  
+  <body>
+
+    <!-- Navigating to other pages -->
+    <nav class="navbar navbar-expand-sm default-nav">
+      <a href="index.html" class="navbar-brand nav-link active">Holiday Calendars</a>
+      <div class="collapse navbar-collapse">
+        <div class="btn-group">
+          <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Months
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="January.html">January</a>
+            <a class="dropdown-item" href="February.html">February</a>
+            <a class="dropdown-item" href="March.html">March</a>
+            <a class="dropdown-item" href="April.html">April</a>
+            <a class="dropdown-item" href="May.html">May</a>
+            <a class="dropdown-item" href="June.html">June</a>
+            <a class="dropdown-item" href="July.html">July</a>
+            <a class="dropdown-item" href="August.html">August</a>
+            <a class="dropdown-item" href="September.html">September</a>
+            <a class="dropdown-item" href="October.html">October</a>
+            <a class="dropdown-item" href="November.html">November</a>
+            <a class="dropdown-item" href="December.html">December</a>
+          </div>
+        </div>
+                
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="lists.html" class="nav-link nav-item">Lists</a></li>
+          <li class="nav-item"><a href="create.html" class="nav-link nav-item">Create</a> </li>
+          <li class="nav-item"><a href="delete.html" class="nav-link nav-item">Delete</a> </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- The form to submit new holidays -->
+    <div class="container mt-4"> <h1 class="h3">Create new holidays</h1></div>
+    <div class="container pt-4 pb-4 nmContainer">
+      <form id="form">
+
+        <div class="form-group">
+          <label for="inputHoliday">Holiday name</label>
+          <input type="text" name="name" class="form-control" id="inputHoliday" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="inputDate">Date</label>
+          <input type="date" class="form-control" name="date" id="inputDate" min="2021-01-01" max="2021-12-31">
+        </div>
+
+        <div class="form-group">
+          <label for="inputLink">Link</label>
+          <input type="text" class="form-control" name="link" id="inputLink" aria-describedby="linkHelp">
+          <small id="linkHelp" class="form-text">A link that will open in a new tab when the holiday is clicked. This can be left blank.</small>
+        </div>
+ 
+        <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        <button type="button" class="btn btn-info" id="addPre" aria-labelledby="addButton">Add pre-written holidays</button>
+        <small id="addButton">This button will add 50 holidays to list, and they will appear on the calendars.</small>
+      </form>
+    </div>
+
+    <!-- The form to submit new holimonths -->
+    <div class="container mt-4"> <h1 class="h3">Create new holimonths</h1></div>
+    <div class="container pt-4 pb-4  mb-4 nmContainer">
+      <form id="form2">
+
+        <div class="form-group">
+          <label for="inputMonth">Month</label>
+          <select id="inputMonth" name="month" class="form-control">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="inputTitle">Holimonth name</label>
+          <input type="text" class="form-control" name="title" id="inputTitle">
+        </div>
+
+        <div class="form-group">
+          <label for="inputhmLink">Link</label>
+          <input type="text" class="form-control" name="link" id="inputhmLink" aria-describedby="linkhmHelp">
+          <small id="linkhmHelp" class="form-text">A link that will open in a new tab when the holimonth is clicked. This can be left blank.</small>
+        </div>
+ 
+        <button type="button" class="btn btn-primary" id="submit2">Submit</button>
+        <button type="button" class="btn btn-info" id="addPreMonth" aria-describedby="addButton2">Add pre-written holimonths</button>
+        <small id="addButton2">This button will add at least 2 holimonths per month for a total of 30.</small>
+      </form>
+    </div>
+
+    <div class="container mt-4 mb-4 pt-3 nmContainer col-6">
+      <h2 class="h6">Instructions</h2>
+      <ul style="list-style-type:none;">
+        <li>Create new holidays:</li>
+        <li>Input holiday name and date for it to appear on the calendar.</li>
+        <li>Add a link that will open when holiday is clicked (optional).</li>
+        <li>The "add pre-written" button will add 50 new holidays.</li>
+        <li>New holidays can be added to lists on the "List" page.</li>
+        <li>Create new holimonths:</li>
+        <li>Input holimonth name and date for it to appear when the calendar name is clicked.</li>
+        <li>Add a link that will open when holimonth is clicked (optional).</li>
+        <li>The "add-prewritten" button will add 30 new holimonths.</li>
+        <li>CS280 Project - Felix Taylor</li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="holidays.js"></script>
+  </body>
+</html>

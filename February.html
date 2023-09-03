@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Felix Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Holiday Calendars - February</title>
+  </head>
+    
+  <body class="feb">
+
+    <!-- Navigating to other pages-->
+    <nav class="navbar navbar-expand-sm nav-feb">
+      <a href="index.html" class="navbar-brand nav-link active">Holiday Calendars</a>
+      <div class="collapse navbar-collapse">
+        <div class="btn-group">
+          <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Months</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="January.html">January</a>
+            <a class="dropdown-item" href="February.html">February</a>
+            <a class="dropdown-item" href="March.html">March</a>
+            <a class="dropdown-item" href="April.html">April</a>
+            <a class="dropdown-item" href="May.html">May</a>
+            <a class="dropdown-item" href="June.html">June</a>
+            <a class="dropdown-item" href="July.html">July</a>
+            <a class="dropdown-item" href="August.html">August</a>
+            <a class="dropdown-item" href="September.html">September</a>
+            <a class="dropdown-item" href="October.html">October</a>
+            <a class="dropdown-item" href="November.html">November</a>
+            <a class="dropdown-item" href="December.html">December</a>
+          </div>
+        </div>
+        
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="lists.html" class="nav-link nav-item">Lists</a></li>
+          <li class="nav-item"><a href="create.html" class="nav-link nav-item">Create</a> </li>
+          <li class="nav-item"><a href="delete.html" class="nav-link nav-item">Delete</a> </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Creating a calendar -->
+    <div class="grid container mt-4">
+  
+      <button class="btn-block text-center day feb-month month" id="january" aria-label="Display holimonths on January 2021"><strong>February 2021</strong></button>
+      <div class="day-of-week text-center">
+        <div class="feb-day" aria-hidden="true">Sun</div>
+        <div class="feb-day" aria-hidden="true">Mon</div>
+        <div class="feb-day" aria-hidden="true">Tue</div>
+        <div class="feb-day" aria-hidden="true">Wed</div>
+        <div class="feb-day" aria-hidden="true">Thu</div>
+        <div class="feb-day" aria-hidden="true">Fri</div>
+        <div class="feb-day" aria-hidden="true">Sat</div>
+      </div>
+
+      <!-- Dates -->
+      <div class="date-grid">
+        <div class="empty"></div>
+        <button id="02-01" class="btn-light" aria-label="Monday 02-01">01</button>
+        <button id="02-02" class="btn-light" aria-label="Tuesday 02-02">02</button>
+        <button id="02-03" class="btn-light" aria-label="Wednesday 02-03">03</button>
+        <button id="02-04" class="btn-light" aria-label="Thursday 02-04">04</button>
+        <button id="02-05" class="btn-light" aria-label="Friday 02-05">05</button>
+        <button id="02-06" class="btn-light" aria-label="Satuday 02-06">06</button>
+        <button id="02-07" class="btn-light" aria-label="Sunday 02-07">07</button>
+        <button id="02-08" class="btn-light" aria-label="Monday 02-08">08</button>
+        <button id="02-09" class="btn-light" aria-label="Tuesday 02-09">09</button>
+        <button id="02-10" class="btn-light" aria-label="Wednesday 02-10">10</button>
+        <button id="02-11" class="btn-light" aria-label="Thursday 02-11">11</button>
+        <button id="02-12" class="btn-light" aria-label="Friday 02-12">12</button>
+        <button id="02-13" class="btn-light" aria-label="Saturday 02-13">13</button>
+        <button id="02-14" class="btn-light" aria-label="Sunday 02-14">14</button>
+        <button id="02-15" class="btn-light" aria-label="Monday 02-15">15</button>
+        <button id="02-16" class="btn-light" aria-label="Tuesday 02-16">16</button>
+        <button id="02-17" class="btn-light" aria-label="Wednesday 02-17">17</button>
+        <button id="02-18" class="btn-light" aria-label="Thursday 02-18">18</button>
+        <button id="02-19" class="btn-light" aria-label="Friday 02-19">19</button>
+        <button id="02-20" class="btn-light" aria-label="Saturday 02-20">20</button>
+        <button id="02-21" class="btn-light" aria-label="Sunday 02-21">21</button>
+        <button id="02-22" class="btn-light" aria-label="Monday 02-22">22</button>
+        <button id="02-23" class="btn-light" aria-label="Tuesday 02-23">23</button>
+        <button id="02-24" class="btn-light" aria-label="Wednesday 02-24">24</button>
+        <button id="02-25" class="btn-light" aria-label="Thursday 02-25">25</button>
+        <button id="02-26" class="btn-light" aria-label="Friday 02-26">26</button>
+        <button id="02-27" class="btn-light" aria-label="Saturday 02-27">27</button>
+        <button id="02-28" class="btn-light" aria-label="Sunday 02-28">28</button>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+    </div>
+
+    <!-- Modal to display holidays -->
+    <div class="modal fade" id="show" aria-modal="true" tabindex="0" aria-label="This modal displays holiday or holimonth buttons" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="h2 modal-title" id="title">Default</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body row d-flex justify-content-around" id="hds"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container mt-4 pt-3 feb-day col-6">
+      <h2 class="h6">Instructions</h2>
+      <ul style="list-style-type:none;">
+        <li>Click the "February 2021" bar to display holimonths (month-long events).</li>
+        <li>Click the dates to display holidays.</li>
+        <li>Holimonth/holiday buttons will open a link in a new tab (if one exists).</li>
+        <li>Create new holidays/holimonths via the "Create" page.</li>
+        <li>Remove holidays/holimonths via the "Delete" page.</li>
+        <li>Sort holidays into lists via the "List" page.</li>
+        <li>CS280 Project - Felix Taylor</li>
+      </ul>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="holidays.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,198 @@
+/* CS280 project 
+ * Holiday Calendars CSS
+ * Felix Taylor */
+
+
+/* Making the navbar text black */
+.navbar a { color: black; }
+
+/* Header color for non-month pages */
+.default-nav { background-color: #a5dce7; }
+
+/* Color for containers on non-month pages */
+.nmContainer {
+  background-color: #e5eff0;
+  border: 2px solid black;
+}
+
+/* https://zellwk.com/blog/calendar-with-css-grid/ */
+.day-of-week, .date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Adding a border to calendar slots */
+.btn-light, .btn-light:hover { border: 1px solid black; }
+
+/* Making sure deletion month buttons aren't transparent */
+.delMonth { background-color: white; }
+.whitebg { background-color: white; }
+
+/* Making sure the empty calendar slots look like the filled ones */
+.empty {
+  border: 1px solid black;
+  background-color: rgb(247, 247, 247);
+}
+
+.month {
+  border: none;
+  background-color: transparent;
+}
+
+/* Color scheme for each month. Adds background and header colors */
+
+/* January color scheme */
+.jan { background-color:#ecf8f5; } 
+.nav-jan { background-color: #d9ddee; }
+.jan-day {
+  border: 1px solid black;
+  background-color: #d9ddee;
+}
+.jan-month {
+  border: 1px solid black;
+  background-color: #d9ddee;
+}
+.jan-month:hover { background-color: rgb(231, 233, 240); }
+
+/* February color scheme */
+.feb { background-color:#f6cff5; }
+.nav-feb { background-color: #f0b1d4; }
+.feb-day {
+  border: 1px solid black;
+  background-color: #f0b1d4;
+}
+.feb-month {
+  border: 1px solid black;
+  background-color: #f0b1d4;
+}
+.feb-month:hover { background-color: #ec9cc0; }
+
+/* March color scheme */
+.mar { background-color:#b3f3a9; }
+.nav-mar { background-color: #85e776; }
+.mar-day {
+  border: 1px solid black;
+  background-color: #85e776;
+}
+.mar-month {
+  border: 1px solid black;
+  background-color: #85e776;
+}
+.mar-month:hover { background-color: #b2eea9; }
+
+/* April color scheme */
+.apr { background-color: #ffd5ee; }
+.nav-apr { background-color: #fdff9f; }
+.apr-day {
+border: 1px solid black;
+background-color: #fdff9f;
+}
+.apr-month {
+border: 1px solid black;
+background-color: #fdff9f;
+}
+.apr-month:hover { background-color: rgb(251, 252, 206); }
+
+/* May color scheme */
+.may { background-color:#e4d5ff ; }
+.nav-may { background-color: #abcbe6; }
+.may-day {
+  border: 1px solid black;
+  background-color: #abcbe6;
+}
+.may-month {
+  border: 1px solid black;
+  background-color: #abcbe6;
+}
+.may-month:hover { background-color: #d0eaff; }
+
+/* June color scheme */
+.jun { background-color:#fff589; }
+.nav-jun { background-color: #a0fff2; }
+.jun-day {
+  border: 1px solid black;
+  background-color: #a0fff2;
+}
+.jun-month {
+  border: 1px solid black;
+  background-color: #a0fff2;
+}
+.jun-month:hover { background-color: #e2fffb; }
+
+/* July color scheme */
+.jul { background-color:#255aa5; }
+.nav-jul { background-color: #f76767; }
+.jul-day {
+  border: 1px solid black;
+  background-color: #f76767;
+}
+.jul-month {
+  border: 1px solid black;
+  background-color: #f76767;
+}
+.jul-month:hover { background-color: rgb(255, 152, 152); }
+
+/* August color scheme */
+.aug { background-color:#eaec83; }
+.nav-aug { background-color: #aad384; }
+.aug-day {
+  border: 1px solid black;
+  background-color: #aad384;
+}
+.aug-month {
+  border: 1px solid black;
+  background-color: #aad384;
+}
+.aug-month:hover { background-color: #c6f19e; }
+
+/* September color scheme */
+.sep { background-color:#dbdbdb ; }
+.nav-sep { background-color: #e0aa9a; }
+.sep-day {
+  border: 1px solid black;
+  background-color: #e0aa9a;
+}
+.sep-month {
+  border: 1px solid black;
+  background-color: #e0aa9a;
+}
+.sep-month:hover { background-color: #ebcec5; }
+
+/* October color scheme */
+.oct { background-color: #000000; }
+.nav-oct { background-color: #f7883f; }
+.oct-day {
+  border: 1px solid black;
+  background-color: #f7883f;
+}
+.oct-month {
+  border: 1px solid black;
+  background-color: #f7883f;
+}
+.oct-month:hover { background-color: #fda164; }
+
+/* November color scheme */
+.nov { background-color:#dccc97; }
+.nav-nov { background-color: #e49364; }
+.nov-day {
+  border: 1px solid black;
+  background-color: #e49364;
+}
+.nov-month {
+  border: 1px solid black;
+  background-color: #e49364;
+}
+.nov-month:hover { background-color: #e4b193; }
+
+/* November color scheme */
+.dec { background-color:#df201c ; }
+.nav-dec { background-color: #52d615; }
+.dec-day {
+  border: 1px solid black;
+  background-color: #52d615;
+}
+.dec-month {
+  border: 1px solid black;
+  background-color: #52d615;
+}
+.dec-month:hover { background-color: #85d460; }
